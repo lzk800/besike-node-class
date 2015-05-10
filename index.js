@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 function Class(options, parent) {
   var child = function () {};
 
@@ -19,6 +18,7 @@ function Class(options, parent) {
     }
   }
 
+  // define super method
   child.prototype.super = function () {
 
     var current_class = child;
@@ -33,20 +33,6 @@ function Class(options, parent) {
   }();
 
   return child;
-=======
-function Class(argument){
-	var cons = function(){};
-	if (argument['initialize']){
-		cons = argument['initialize'];
-	}
-	var name ='';
-	for(name in argument){
-		if (name !== 'initialize'){
-			cons.prototype[name] = argument[name];
-		}
-	}
-	return cons;
->>>>>>> 3b2e4656c85b15a4736fe8fa819ea311c6e42c48
 }
 
 module.exports = Class;
